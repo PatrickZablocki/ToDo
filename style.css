@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.Header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #82808080;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgb(96, 96, 96);
+}
+
+.Header_content ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.Header_content li {
+    margin: 0 5px;
+}
+
+.Header_content li > a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    text-shadow: 7px 7px 7px black;
+}
+
+.Header_content li > a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Hier kommt der neue Stil für das Verschieben der H1-Überschrift nach links */
+h1 {
+    margin-right: auto;
+    font-size: 3rem;
+    text-shadow: 10px 10px 10px black;
+    color: #222;
+}
