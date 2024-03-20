@@ -23,7 +23,19 @@ document.addEventListener("DOMContentLoaded", function() {
         deleteButton.addEventListener("click", function() {
             todoItem.remove();
         });
+        // Here create the Button for Switch the ToDo
+        const moveButton = document.createElement("button");
+        moveButton.textContent = "Verschieben";
+        moveButton.addEventListener("click", function() {
+            const parentContainer = todoItem.parentElement;
+            if (parentContainer === progressContainer) {
+                issuesContainer.appendChild(todoItem);
+            } else if (parentContainer === issuesContainer) {
+                doneContainer.appendChild(todoItem);
+            }
+        });
         todoItem.appendChild(deleteButton);
+        todoItem.appendChild(moveButton);
         return todoItem;
     }
 });
